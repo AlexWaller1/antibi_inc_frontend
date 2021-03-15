@@ -7,8 +7,19 @@ class Hybrids {
     }
 
     fetchAndLoadHybrids(){
-        this.adapter.getHybrids().then(hybrids => {
-            console.log(hybrids)
+        this.adapter
+        .getHybrids()
+        .then(hybrids => {
+           hybrids.forEach(hybrid => this.hybrids.push(hybrid))
         })
+        .then(() => {
+            this.render()
+        })
+    }
+
+    render() {
+        const hybridsContainer = document.getElementById('hybrids-container')
+        hybridsContainer.innerHTML = 'Hybrids Here'
+
     }
 }

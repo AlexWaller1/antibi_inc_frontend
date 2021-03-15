@@ -20,6 +20,6 @@ class Hybrids {
     render() {
         const hybridsContainer = document.getElementById('hybrids-container')
         hybridsContainer.innerHTML = 'Hybrids Here'
-
-    }
+        
+  }
 }

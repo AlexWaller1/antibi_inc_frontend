@@ -20,8 +20,10 @@ class Hybrids {
     }
 
     render() {
+        const hybridsArray = this.hybrids.map(hybrid => `<li>${hybrid.name}</li>`)
         const hybridsContainer = document.getElementById('hybrids-container')
-        hybridsContainer.innerHTML = 'Hybrids Here'
+        hybridsContainer.innerHTML = `${}`
+
         
   }
 }

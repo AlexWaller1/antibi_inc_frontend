@@ -8,6 +8,11 @@ class Hybrid {
         this.image = hybridJSON.image
         
     }
+
+    renderLi() {
+        return `<li>${this.name}</li>`
+        
+    }
 }
 
 // will create instance of hybrid class

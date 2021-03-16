@@ -24,7 +24,7 @@ class Hybrids {
     }
 
     render() {
-        this.hybridsContainer.innerHTML = this.hybrids.map(hybrid => `<li>${hybrid.name}</li>`).join('')
+        this.hybridsContainer.innerHTML = this.hybrids.map(hybrid => hybrid.renderLi()).join('')
 
         }
 }

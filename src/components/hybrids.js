@@ -18,6 +18,7 @@ class Hybrids {
 
             this.adapter.createHybrid(value).then(hybrid => {
                 this.hybrids.push(new Hybrid(hybrid))
+                this.render()
             })
         }
     

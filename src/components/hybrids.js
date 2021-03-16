@@ -10,7 +10,9 @@ class Hybrids {
         this.adapter
         .getHybrids()
         .then(hybrids => {
-           hybrids.forEach(hybrid => this.hybrids.push(hybrid))
+           hybrids.forEach(hybrid => this.hybrids.push(new Hybrid(hybrid)))
+           // pushing new note instance into notes array
+           console.log(this.hybrids)
         })
         .then(() => {
             this.render()

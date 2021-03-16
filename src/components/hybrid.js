@@ -9,3 +9,5 @@ class Hybrid {
         
     }
 }
+
+// will create instance of hybrid class

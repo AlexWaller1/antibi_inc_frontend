@@ -8,4 +8,17 @@ class HybridsAdapter {
         return fetch(this.baseUrl).then(res => res.json()
         )
     }
+
+    createHybrid(value) {
+        const hybrid = {
+            name: value
+        }
+        return fetch(this.baseUrl,{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            name: JSON.stringify({ hybrid }),
+        }).then(res => res.json())
+    }
 }

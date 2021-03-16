@@ -7,14 +7,18 @@ class Hybrids {
     }
         initBindingsAndEventListeners(){
           this.hybridsContainer = document.getElementById('hybrids-container')
-          this.newHybridName = document.getElementById()
+          this.newHybridName = document.getElementById('new-hybrid-name')
           this.hybridForm = document.getElementById('new-hybrid-form')
-          this.hybridForm.addEventListener('submit', this.createHybrid)
+          this.hybridForm.addEventListener('submit', this.createHybrid.bind(this))
         }
 
         createHybrid(e) {
             e.preventDefault()
-            console.log(this.hybridForm.value)
+            const value = this.newHybridName.value
+
+            this.adapter.createHybrid(value).then(hybrid => {
+                this.hybrids.push(new Hybrid(hybrid))
+            })
         }
     
 

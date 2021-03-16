@@ -7,6 +7,7 @@ class Hybrids {
 
         initBindingsAndEventListeners(){
           this.hybridsContainer = document.getElementById('hybrids-container')
+          this.hybridForm = document.getElementById('new-hybrid-form')
         }
     }
 

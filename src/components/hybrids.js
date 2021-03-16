@@ -4,12 +4,19 @@ class Hybrids {
         this.adapter = new HybridsAdapter()
         this.initBindingsAndEventListeners()
         this.fetchAndLoadHybrids()
-
+    }
         initBindingsAndEventListeners(){
           this.hybridsContainer = document.getElementById('hybrids-container')
+          this.newHybridName = document.getElementById()
           this.hybridForm = document.getElementById('new-hybrid-form')
+          this.hybridForm.addEventListener('submit', this.createHybrid)
         }
-    }
+
+        createHybrid(e) {
+            e.preventDefault()
+            console.log(this.hybridForm.value)
+        }
+    
 
     fetchAndLoadHybrids(){
         this.adapter

@@ -2,8 +2,12 @@ class Hybrids {
     constructor() {
         this.hybrids = []
         this.adapter = new HybridsAdapter()
-        this.bindEventListeners()
+        this.initBindingsAndEventListeners()
         this.fetchAndLoadHybrids()
+
+        initBindingsAndEventListeners(){
+          this.hybridsContainer = document.getElementById('hybrids-container')
+        }
     }
 
     fetchAndLoadHybrids(){
@@ -20,10 +24,7 @@ class Hybrids {
     }
 
     render() {
-        const hybridsArray = this.hybrids.map(hybrid => `<li>${hybrid.name}</li>`)
-        const hybridsContainer = document.getElementById('hybrids-container')
-        hybridsContainer.innerHTML = `${}`
+        this.hybridsContainer.innerHTML = this.hybrids.map(hybrid => `<li>${hybrid.name}</li>`).join('')
 
-        
-  }
+        }
 }

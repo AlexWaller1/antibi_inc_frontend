@@ -10,6 +10,7 @@ class Hybrids {
           this.newHybridName = document.getElementById('new-hybrid-name')
           this.hybridForm = document.getElementById('new-hybrid-form')
           this.hybridForm.addEventListener('submit', this.createHybrid.bind(this))
+          this.hybridsContainer.addEventListener('dblclick')
         }
 
         createHybrid(e) {
@@ -18,6 +19,7 @@ class Hybrids {
 
             this.adapter.createHybrid(value).then(hybrid => {
                 this.hybrids.push(new Hybrid(hybrid))
+                this.newHybridName.value = ''
                 this.render()
             })
         }

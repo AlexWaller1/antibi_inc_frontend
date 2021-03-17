@@ -10,7 +10,7 @@ class Hybrid {
     }
 
     renderLi() {
-        return `<li data-noteId=${this.name}</li>`
+        return `<li data-Id=${this.name}</li>`
         
     }
 }

@@ -27,7 +27,11 @@ class Hybrids {
         }
 
         handleHybridClick(e) {
-         const li = e.target
+         this.toggleHybrid(e)
+        }
+
+        toggleHybrid(e) {
+            const li = e.target
          li.contentEditable = true
          li.focus()
         }
@@ -37,6 +41,7 @@ class Hybrids {
       li.contentEditable = false
       li.classList.remove('editable')
       const newValue = li.innerHTML
+      const id = li.dataset.id
       this.adapter.updateHybrid(newValue, id)
     }
 

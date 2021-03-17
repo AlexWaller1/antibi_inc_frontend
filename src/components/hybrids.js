@@ -37,7 +37,7 @@ class Hybrids {
       li.contentEditable = false
       li.classList.remove('editable')
       const newValue = li.innerHTML
-      
+      this.adapter.updateHybrid(newValue, id)
     }
 
     fetchAndLoadHybrids(){

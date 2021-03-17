@@ -10,7 +10,7 @@ class Hybrid {
     }
 
     renderLi() {
-        return `<li> contenteditable="true">${this.name}</li>`
+        return `<li>${this.name}</li>`
         
     }
 }

@@ -7,10 +7,12 @@ class Hybrids {
     }
         initBindingsAndEventListeners(){
           this.hybridsContainer = document.getElementById('hybrids-container')
+          this.name = document.querySelector('name')
           this.newHybridName = document.getElementById('new-hybrid-name')
           this.hybridForm = document.getElementById('new-hybrid-form')
           this.hybridForm.addEventListener('submit', this.createHybrid.bind(this))
-          this.hybridsContainer.addEventListener('dblclick')
+          this.hybridsContainer.addEventListener('dblclick', this.handleHybridClick.bind(this))
+          this.hybridsContainer.addEventListener('blur', this.updateHybrid.bind(this), true)
         }
 
         createHybrid(e) {
@@ -23,7 +25,16 @@ class Hybrids {
                 this.render()
             })
         }
-    
+
+        handleHybridClick(e) {
+         const li = e.target
+         li.contentEditable = true
+         li.focus()
+        }
+
+    updateHybrid() {
+
+    }
 
     fetchAndLoadHybrids(){
         this.adapter

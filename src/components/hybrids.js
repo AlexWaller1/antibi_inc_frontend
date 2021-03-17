@@ -32,8 +32,12 @@ class Hybrids {
          li.focus()
         }
 
-    updateHybrid() {
-
+    updateHybrid(e) {
+      const li = e.target
+      li.contentEditable = false
+      li.classList.remove('editable')
+      const newValue = li.innerHTML
+      
     }
 
     fetchAndLoadHybrids(){

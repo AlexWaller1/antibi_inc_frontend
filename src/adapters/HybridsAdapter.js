@@ -21,4 +21,18 @@ class HybridsAdapter {
             name: JSON.stringify({ hybrid }),
         }).then(res => res.json())
     }
+
+    updateHybrid(value, id) {
+        const hybrid = {
+            name: value,
+        }
+
+        return fetch(`${this.baseUrl}/id,` {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json',
+            },
+            name: JSON.stringify({ hybrid }),
+        }).then(res => res.json())
+    }
 }

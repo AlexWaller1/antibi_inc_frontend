@@ -49,8 +49,8 @@ class Hybrids {
         this.adapter
         .getHybrids()
         .then(hybrids => {
-           hybrids.forEach(hybrid => this.hybrids.push(new Hybrid(hybrid)))
-           // pushing new note instance into notes array
+           hybrids.sort((a, b) => a.id - b.id).forEach(hybrid => this.hybrids.push(new Hybrid(hybrid)))
+           // pushing new hybrid instance into hybrids array
            console.log(this.hybrids)
         })
         .then(() => {

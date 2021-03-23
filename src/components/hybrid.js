@@ -1,4 +1,4 @@
-class Hybrid {
+  class Hybrid {
     constructor(hybridJSON) {
         this.id = hybridJSON.id
         this.name = hybridJSON.name
@@ -14,5 +14,6 @@ class Hybrid {
         
     }
 }
+
 
 // will create instance of hybrid class

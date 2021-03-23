@@ -8,7 +8,7 @@ class HybridsAdapter {
         return fetch(this.baseUrl).then(res => res.json()
         )
     }
-
+     // get request
     createHybrid(value) {
         const hybrid = {
             name: value
@@ -21,7 +21,7 @@ class HybridsAdapter {
             name: JSON.stringify({ hybrid }),
         }).then(res => res.json())
     }
-
+    // post request
     updateHybrid(value, id) {
         const hybrid = {
             name: value,
@@ -35,4 +35,5 @@ class HybridsAdapter {
             name: JSON.stringify({ hybrid }),
         }).then(res => res.json())
     }
+    // patch request
 }

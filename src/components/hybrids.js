@@ -2,6 +2,7 @@
     constructor() {
         this.hybrids = []
         this.adapter = new HybridsAdapter()
+        // adapter property for Hybrids set to the Hybrids Adapter
         this.initBindingsAndEventListeners()
         this.fetchAndLoadHybrids()
     }
@@ -21,6 +22,7 @@
 
         this.adapter.createHybrid(value).then(hybrid => {
             this.hybrids.push(new Hybrid(hybrid))
+            // hybrid pushed into hybrids array
             this.newHybridName.value = ''
             this.render()
         })
@@ -48,9 +50,11 @@
     fetchAndLoadHybrids() {
         this.adapter
             .getHybrids()
+            // have access to this method through the adapter
             .then(hybrids => {
                 hybrids.sort((a, b) => a.id - b.id).forEach(hybrid => this.hybrids.push(new Hybrid(hybrid)))
                 // pushing new hybrid instance into hybrids array
+                // use hybrid to create a new instance of hybrid as we iterate over the array
                 console.log(this.hybrids)
             })
             .then(() => {

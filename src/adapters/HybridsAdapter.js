@@ -1,4 +1,5 @@
 // will talk to backend Api
+// kind of similar to the controller in a rails app
 class HybridsAdapter {
     constructor() {
         this.baseUrl = 'http://localhost:3000/api/v1/hybrids'
@@ -8,7 +9,9 @@ class HybridsAdapter {
         return fetch(this.baseUrl).then(res => res.json()
         )
     }
-     // get request
+     // get request to base URL
+     // once that request is completed, then objects will be parsed through JSON
+     // since it's a class it needs a constructor
     createHybrid(value) {
         const hybrid = {
             name: value

@@ -17,3 +17,4 @@
 
 
 // will create instance of hybrid class
+// enables us to have an array of hybrid objects

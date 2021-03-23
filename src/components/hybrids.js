@@ -14,6 +14,7 @@
         this.hybridForm.addEventListener('submit', this.createHybrid.bind(this))
         this.hybridsContainer.addEventListener('dblclick', this.handleHybridClick.bind(this))
         this.hybridsContainer.addEventListener('blur', this.updateHybrid.bind(this), true)
+        // this method is for making catching DOM elements more efficient
     }
 
     createHybrid(e) {

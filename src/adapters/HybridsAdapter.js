@@ -14,20 +14,20 @@ class HybridsAdapter {
      // since it's a class it needs a constructor
     createHybrid(value) {
         const hybrid = {
-            name: value
+            biography: value
         }
         return fetch(this.baseUrl,{
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
             },
-            name: JSON.stringify({ hybrid }),
+            biography: JSON.stringify({ hybrid }),
         }).then(res => res.json())
     }
     // post request
     updateHybrid(value, id) {
         const hybrid = {
-            name: value,
+            biography: value,
         }
 
         return fetch(`${this.baseUrl}/${id}`, {
@@ -35,7 +35,7 @@ class HybridsAdapter {
             headers: {
                 'content-type': 'application/json',
             },
-            name: JSON.stringify({ hybrid }),
+            biography: JSON.stringify({ hybrid }),
         }).then(res => res.json())
     }
     // patch request

@@ -8,8 +8,8 @@
     }
     initBindingsAndEventListeners() {
         this.hybridsContainer = document.getElementById('hybrids-container')
-        this.name = document.querySelector('name')
-        this.newHybridName = document.getElementById('new-hybrid-name')
+        this.biography = document.querySelector('biography')
+        this.newHybridBiography = document.getElementById('new-hybrid-biography')
         this.hybridForm = document.getElementById('new-hybrid-form')
         this.hybridForm.addEventListener('submit', this.createHybrid.bind(this))
         this.hybridsContainer.addEventListener('dblclick', this.handleHybridClick.bind(this))
@@ -19,12 +19,12 @@
 
     createHybrid(e) {
         e.preventDefault()
-        const value = this.newHybridName.value
+        const value = this.newHybridBiography.value
 
         this.adapter.createHybrid(value).then(hybrid => {
             this.hybrids.push(new Hybrid(hybrid))
             // hybrid pushed into hybrids array
-            this.newHybridName.value = ''
+            this.newHybridBiography.value = ''
             this.render()
         })
     }

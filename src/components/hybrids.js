@@ -53,6 +53,7 @@
             .getHybrids()
             // have access to this method through the adapter
             .then(hybrids => {
+                console.log("hybrids", hybrids)
                 hybrids.sort((a, b) => a.id - b.id).forEach(hybrid => this.hybrids.push(new Hybrid(hybrid)))
                 // pushing new hybrid instance into hybrids array
                 // use hybrid to create a new instance of hybrid as we iterate over the array
@@ -64,6 +65,7 @@
     }
 
     render() {
+        console.log("in render")
         this.hybridsContainer.innerHTML = this.hybrids.map(hybrid => hybrid.renderLi()).join('')
 
     }

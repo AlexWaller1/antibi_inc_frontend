@@ -3,11 +3,10 @@
         this.id = hybridJSON.id
         this.biography = hybridJSON.biography
         
-        
     }
 
     renderLi() {
-        return `<li data-Id=${this.name}</li>`
+        return `<li data-Id=${this.id}>${this.biography}</li>`
         // any instance of note can renderLi and will return this markup
     }
 }

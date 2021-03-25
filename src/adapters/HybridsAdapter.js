@@ -16,12 +16,12 @@ class HybridsAdapter {
         const hybrid = {
             biography: value
         }
-        return fetch(this.baseUrl,{
+        return fetch(this.baseUrl, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
             },
-            biography: JSON.stringify({ hybrid }),
+            body: JSON.stringify({ hybrid }),
         }).then(res => res.json())
     }
     // post request
@@ -35,7 +35,7 @@ class HybridsAdapter {
             headers: {
                 'content-type': 'application/json',
             },
-            biography: JSON.stringify({ hybrid }),
+            body: JSON.stringify({ hybrid }),
         }).then(res => res.json())
     }
     // patch request

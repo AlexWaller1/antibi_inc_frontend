@@ -8,12 +8,14 @@
     }
     initBindingsAndEventListeners() {
         this.hybridsContainer = document.getElementById('hybrids-container')
+        this.placesContainer = document.getElementById('places-container')
         this.biography = document.querySelector('biography')
         this.newHybridBiography = document.getElementById('new-hybrid-biography')
         this.hybridForm = document.getElementById('new-hybrid-form')
         this.hybridForm.addEventListener('submit', this.createHybrid.bind(this))
         this.hybridsContainer.addEventListener('dblclick', this.handleHybridClick.bind(this))
         this.hybridsContainer.addEventListener('blur', this.updateHybrid.bind(this), true)
+        
         // this method is for making catching DOM elements more efficient
     }
 
@@ -30,7 +32,13 @@
     }
 
     handleHybridClick(e) {
-        this.toggleHybrid(e)
+        if (e.target.classList.contains("places")){
+            this.showPlace(e)
+        } else{
+            this.toggleHybrid(e)
+        }
+        
+
     }
 
     toggleHybrid(e) {
@@ -46,6 +54,16 @@
         const newValue = li.innerHTML
         const id = li.dataset.id
         this.adapter.updateHybrid(newValue, id)
+    }
+
+
+
+    
+
+    showPlace(e) {
+      this.placesContainer.innerHTML = "PLACE"
+      this.adapter.getPlaces(id)
+      
     }
 
     fetchAndLoadHybrids() {

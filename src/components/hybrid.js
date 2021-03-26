@@ -6,8 +6,8 @@
     }
 
     renderLi() {
-        return `<li data-Id=${this.id}>${this.biography}</li>`
-        // any instance of note can renderLi and will return this markup
+        return `<li data-Id=${this.id}>${this.biography}<span class="places">View</span></li>`
+        // any instance of hybrid can renderLi and will return this markup
     }
 }
 

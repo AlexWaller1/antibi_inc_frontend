@@ -8,10 +8,14 @@
 
 - Once on the show page we should be able to leave comments
 
-- ask about the steps of a fetch request
+- ask about the steps of a fetch request //
 
-- ask about promises are
+- ask about promises are //
 
 - ask about the dom
 
 - ask about eventListeners
+
+- ask about value
+
+- ask about hybrid.js
